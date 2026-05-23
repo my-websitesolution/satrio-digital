@@ -321,6 +321,87 @@ body {
 .wa-button i {
   font-size: 50px;
   color: #22c55e;
+
+  .footer {
+  background: #0f172a;
+
+  color: white;
+
+  padding: 80px 60px 30px;
+}
+
+.footer-container {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  gap: 80px;
+}
+
+.footer-brand {
+  max-width: 350px;
+}
+
+.footer-logo {
+  font-size: 30px;
+
+  margin-bottom: 20px;
+}
+
+.footer-description {
+  color: #cbd5e1;
+
+  line-height: 1.7;
+
+  font-size: 15px;
+}
+
+.footer-links {
+  display: flex;
+
+  gap: 70px;
+}
+
+.footer-menu {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+.footer-menu h3 {
+  font-size: 19px;
+
+  margin-bottom: 10px;
+}
+
+.footer-menu a {
+  text-decoration: none;
+
+  color: #cbd5e1;
+
+  transition: 0.2s;
+}
+
+.footer-menu a:hover {
+  color: #60a5fa;
+}
+
+.footer-bottom {
+  margin-top: 60px;
+
+  padding-top: 20px;
+  padding-bottom: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  text-align: center;
+
+  color: #94a3b8;
+
+  font-size: 14px;
 }
 
 @media (max-width: 1024px) {
@@ -431,6 +512,27 @@ body {
   .wa-button i {
     font-size: 35px;
   }
+
+  .footer {
+    padding: 70px 40px 25px;
+  }
+
+  .footer-container {
+    gap: 50px;
+  }
+
+  .footer-links {
+    gap: 40px;
+  }
+
+  .footer-logo {
+    font-size: 26px;
+  }
+
+  .footer-description {
+    font-size: 14px;
+  }
+  
 }
 
 @media (max-width: 768px) {
@@ -720,5 +822,51 @@ body {
 
   .fitur-box {
     padding-bottom: 10px;
+  }
+
+  .footer {
+    padding: 60px 20px 20px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+
+    gap: 40px;
+  }
+
+  .footer-brand {
+    max-width: 100%;
+  }
+
+  .footer-links {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+  }
+
+  .footer-logo {
+    font-size: 24px;
+  }
+
+  .footer-description {
+    font-size: 14px;
+  }
+
+  .footer-menu h3 {
+    font-size: 17px;
+  }
+
+  .footer-menu a {
+    font-size: 14px;
+  }
+
+  .footer-bottom {
+    margin-top: 40px;
+
+    font-size: 13px;
   }
 }
