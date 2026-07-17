@@ -1,1436 +1,2431 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 93px;
+  scroll-padding-top: 120px;
 }
-
 body {
-  margin: 0;
-  background-color: aliceblue;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.hamburger {
-  font-size: 30px;
-  display: none;
-  cursor: pointer;
-}
-
 header {
+  width: 100%;
+  padding: 18px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: sticky;
   top: 0;
   z-index: 9999;
+  background-color: #0c0806;
 }
 
-.navbar {
-  width: 100%;
-
-  background: white;
+.logo-nama {
   display: flex;
+  gap: 15px;
   align-items: center;
-  padding: 10px 15px;
-}
-
-.kiri {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  padding: 0 60px;
 }
 
 .logo {
-  width: 50px;
+  width: 100%;
+  max-width: 85px;
+}
+
+.namasub {
+  display: flex;
+  flex-direction: column;
 }
 
 .nama {
-  font-size: 25px;
-  font-weight: 550;
-}
-
-.menu {
-  margin-left: auto;
-  display: flex;
-  list-style: none;
-  gap: 20px;
-  padding-right: 80px;
-}
-
-.menu li a {
-  margin: 0;
-  display: block;
-  color: black;
-  padding: 12px;
-  align-items: top;
-  text-decoration: none;
-  gap: 20px;
-}
-
-.menu li a:hover {
-  border-bottom: 2px solid blue;
-  padding-bottom: 10px;
-  color: blue;
-}
-
-.home {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 1800px;
-  padding: 40px;
-  padding-top: 9px;
-  gap: 25px;
-
-  min-height: 87vh;
-}
-
-.hero-text {
-  padding: 40px;
-  justify-content: flex-start;
-  width: 50%;
-  max-width: 600px;
-}
-
-.subjudul {
-  padding: 10px;
-  border-radius: 15px;
-  box-sizing: border-box;
-  display: inline-block;
-  background-color: #1e90ff20;
-  color: rgb(0, 128, 255);
-  font-size: 15px;
-  font-weight: 550px;
-}
-
-.JUDUL {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-size: 55px;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-.deskripsi {
-  margin-top: 25px;
-  font-size: 18px;
-  margin-bottom: 35px;
-}
-
-.getour {
-  display: flex;
-  gap: 20px;
-}
-
-.get {
-  background-color: #1d4ed8;
-  padding: 17px;
   color: white;
-  border: none;
-  border-radius: 12px;
-  font-size: 20px;
-  text-decoration: none;
-  display: inline-block;
-  text-align: center;
+  font-size: 1.85rem;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
-.get:hover {
+.subnama {
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 4px;
+  margin-top: 5px;
+}
+
+.hamburger {
+  display: none;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  list-style: none;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.33rem;
+  font-weight: 400;
+  transition: 0.3s;
+  padding-bottom: 15px;
+}
+
+.navbar a:hover {
+  border-bottom: 2px solid #c99563;
+  color: #c99563;
+}
+
+.CTA-AWAL {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #a8744b;
+  padding: 14px 25px;
+  border-radius: 12px;
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.3s;
+}
+
+.CTA-AWAL:hover {
   transform: translateY(-5px);
 }
 
-.our {
-  border-style: solid;
-  border-width: 2px;
-  border-color: #1d4ed8;
-  padding: 17px;
-  color: #1d4ed8;
-  border-radius: 12px;
-  font-size: 20px;
+.CTA-AWAL i {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.cta-awal {
+  color: white;
   text-decoration: none;
-  display: inline-block;
-  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
-.our:hover {
-  cursor: pointer;
-  transition: 0.2s;
-  transform: scale(1.05);
+.home {
+  background-image: url(home.jpg);
+  background-size: cover; /* Mengunci gambar agar menutup penuh */
+  background-position: center; /* Gambar tetap di tengah saat layar menyusut */
+  min-height: 100vh;
+  min-height: 100dvh;
+  color: white;
+  padding: 120px 8%;
 }
 
-.isi {
+.home-subteks {
+  font-size: 78px;
+  line-height: 1.1;
+  max-width: 700px;
+  margin-bottom: 30px;
+}
+
+.home-teks {
+  color: #d0d0d0;
+  font-size: 22px;
+  line-height: 1.8;
+  max-width: 650px;
+  margin-bottom: 40px;
+}
+
+/* Kontainer Utama Tombol */
+.Menu-lokasi {
   display: flex;
   align-items: center;
-  width: 50%;
-  max-width: 600px;
-
-  margin-right: 0;
+  gap: 16px; /* Jarak antar tombol */
+  margin-top: 24px;
 }
 
-#About {
-  background-color: white;
+/* === PERBAIKAN TOMBOL 1: LIHAT MENU === */
+/* Targetkan langsung ke tag <a> agar transisi dan hover berada di satu elemen yang sama */
+.menu-btn a.home-menu {
+  display: inline-block;
+  background-color: #a8744b; /* Warna cokelat utama */
+  color: #ffffff;
+  padding: 14px 31px;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid #b3895c;
+  border-radius: 5px;
+  /* Transisi dipasang di sini */
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Hover langsung ke tag <a> agar efek jalannya mulus */
+.menu-btn a.home-menu:hover {
+  background-color: #b3895c; /* Warna berubah saat hover */
+  border-color: #b3895c;
+  transform: translateY(-4px); /* Efek melayang halus ke atas */
+}
+
+/* === TOMBOL 2: LOKASI KAMI (Sekarang diterapkan langsung pada tag <a>) === */
+a.lokasi-btn {
   display: flex;
-  gap: 100px;
-  padding: 70px 60px;
   align-items: center;
   justify-content: center;
+  padding: 14px 29px;
+  border: 1px solid rgba(128, 128, 128, 0.762);
+  border-radius: 5px;
+  text-decoration: none; /* Menghilangkan garis bawah link bawaan browser */
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+  cursor: pointer;
+}
+
+/* Icon Bootstrap langsung di dalam tautan lokasi */
+.lokasi-btn i.bi-geo-alt {
+  color: #ffffff;
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+/* Teks di dalam pembungkus kotak (Div) */
+.lokasi-btn .home-lokasi {
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Efek Hover Tombol Lokasi (Tetap bekerja penuh pada area kotak) */
+.lokasi-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-4px);
+}
+
+.about {
+  background-color: #fdfcfb;
+  padding: 100px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 95px;
 }
 
 .about-image {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 20px;
+  width: 50%;
+  position: relative;
 }
 
-.subjudul-about {
-  color: #1d4ed8;
+.about-image img:first-child {
+  width: 580px;
+  height: 420px;
+  background-color: #d6d6d6;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.about-image img:last-child {
+  width: 220px;
+  height: 220px;
+  background-color: #c4c4c4;
+  border-radius: 12px;
+  object-fit: cover;
+  position: absolute;
+
+  /* KUNCI PERUBAHAN DI SINI */
+  right: -40px; /* Menggeser keluar ke arah kanan */
+  bottom: -30px; /* Menggeser keluar ke arah bawah */
+
+  border: 4px solid white;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15); /* Tambahan bayangan agar efek tumpukan lebih hidup */
+}
+
+.about-deskripsi {
+  width: 50%;
+}
+
+.about-title {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #a8744b;
+  margin-bottom: 15px;
+}
+
+.about-subtitle {
+  font-size: 48px;
+  color: #0c0806;
+  margin-bottom: 25px;
+}
+
+.about-teks {
+  color: #666;
+  line-height: 1.9;
+  font-size: 18px;
+  margin-bottom: 45px;
 }
 
 .about-fitur {
   display: flex;
-  gap: 100px;
+  gap: 30px;
 }
 
-.services {
-  background-color: #f5f7fb;
-  padding: 100px 60px;
-  padding-top: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+.abaout-fitur-box {
+  flex: 1;
 }
 
-.services-subtitle {
-  color: #2563eb;
-  font-size: 16px;
-}
-
-.services-title {
-  font-size: 37px;
-}
-
-.text-services {
-  justify-content: center;
-  align-items: center;
-}
-
-.services-fitur {
-  display: flex;
-  gap: 50px;
-}
-
-.icon-services {
-  width: 65px;
-  height: 65px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: #eef2ff;
-  color: #2563eb;
-  font-size: 35px;
-}
-
-.fitur-box-services {
-  background-color: white;
-  padding: 20px;
-  border-radius: 15px;
-  margin-top: 30px;
-}
-
-.line-services {
-  width: 23px;
-  height: 2px;
-  background: #2563eb;
-  border-radius: 10px;
-  margin: 15px 0 20px;
-}
-
-.fitur-title-services {
-  text-align: start;
-}
-
-.fitur-text-services {
-  text-align: start;
-  max-width: 225px;
-  max-height: fit-content;
-  line-height: 1.5;
-}
-
-#Portofolio {
-  padding-top: 20px;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 50px 60px;
-
-  box-sizing: border-box;
-}
-
-.title-portofolio {
-  font-size: 16px;
-  color: #1d4ed8;
-}
-
-.portofolio-fitur {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  gap: 50px;
-}
-
-.portofolio-fitur-box {
-  background-color: aliceblue;
-  padding: 40px;
-  border-radius: 8px;
-  margin-top: 20px;
-}
-
-.portofolio-gambar {
-  width: 100%;
-  max-width: 490px;
-  border-radius: 8px;
-}
-
-.portofolio-fitur-title {
+.abaout-fitur-box i {
   font-size: 30px;
-  font-weight: 500;
+  color: #a8744b;
+  margin-bottom: 15px;
 }
 
-.btn-portofolio {
-  display: inline-flex;
-  align-items: center;
-
-  background-color: blue;
-  padding: 15px;
-  margin-right: 80px;
-  border-radius: 8px;
-  text-decoration: none;
-  color: white;
+.about-fitur-judul {
   font-size: 20px;
-  font-weight: 500;
-
-  transition: 0.2s;
-}
-
-.btn-portofolio:hover {
-  transform: translateY(-5px);
-}
-
-.contact {
-  background-color: #f5f7fb;
-  padding: 100px 60px;
-  display: flex;
-  justify-content: center;
-}
-
-.box-contact {
-  background-color: #eef2ff;
-  width: 100%;
-  max-width: 1230px;
-  padding: 60px;
-  padding-top: 40px;
-  border-radius: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 50px;
-}
-
-.text-contact {
-  text-align: start;
-  max-width: 500px;
-}
-
-.subtitle-contact {
-  color: #2563eb;
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  margin-bottom: 20px;
-}
-
-.contact-titlee {
-  font-size: 37px;
-  line-height: 1.1;
-  margin-bottom: 25px;
-}
-
-.contact-title {
-  font-size: 37px;
-  line-height: 1.1;
-  margin-bottom: 25px;
-  color: #2563eb;
-}
-
-.contact-title span {
-  color: #2563eb;
-}
-
-.fitur-text-contact {
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-.wa-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 15px;
-  background: white;
-  padding: 25px 40px;
-  margin-right: 80px;
-  border-radius: 20px;
-  text-decoration: none;
-  color: black;
-  font-size: 24px;
-  font-weight: 500;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  transition: 0.2s;
-}
-
-.wa-button:hover {
-  transform: translateY(-5px);
-}
-
-.wa-button i {
-  font-size: 50px;
-  color: #22c55e;
-}
-
-.footer {
-  background: #0f172a;
-
-  color: white;
-
-  padding: 80px 60px 30px;
-}
-
-.footer-container {
-  display: flex;
-
-  justify-content: space-between;
-
-  align-items: flex-start;
-
-  gap: 80px;
-}
-
-.footer-brand {
-  max-width: 350px;
-}
-
-.footer-logo {
-  font-size: 30px;
-
-  margin-bottom: 20px;
-}
-
-.footer-description {
-  color: #cbd5e1;
-
-  line-height: 1.7;
-
-  font-size: 15px;
-}
-
-.footer-links {
-  display: flex;
-
-  gap: 70px;
-}
-
-.footer-menu {
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 14px;
-}
-
-.footer-menu h3 {
-  font-size: 19px;
-
+  color: #0c0806;
   margin-bottom: 10px;
 }
 
-.footer-menu a {
-  text-decoration: none;
-
-  color: #cbd5e1;
-
-  transition: 0.2s;
+.about-fitur-subjudul {
+  color: #666;
+  line-height: 1.6;
 }
 
-.footer-menu a:hover {
-  color: #60a5fa;
+.menu {
+  display: flex;
+  background: #0c0806;
+  min-height: 430px;
 }
 
-.footer-bottom {
-  margin-top: 60px;
+.menu-deskripsi {
+  /* MELEBARKAN PADDING: kiri & kanan ditambah jadi 100px */
+  width: 45%;
+  background: #0c0806;
+  color: white;
+  padding: 50px 100px 50px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
 
-  padding-top: 20px;
-  padding-bottom: 15px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+.menu-title {
+  color: #c99563;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
 
-  text-align: center;
+.menu-subtitle {
+  font-size: 28px;
+  line-height: 1.3;
+  margin-bottom: 30px;
+}
 
-  color: #94a3b8;
+.menu-fitur {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
 
+.menu-fitur-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  /* TAMBAHAN: merapatkan harga jika teks terlalu pendek */
+  justify-content: flex-start;
+}
+
+.menu-fitur-box img {
+  width: 100%;
+  max-width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  background: #777;
+  object-fit: cover;
+}
+.menu-fitur-teks {
+  /* MERAPATKAN TEKS & HARGA */
+  /* Menghapus flex: 1 agar tidak mendorong harga ke ujung */
+  flex: none;
+  width: 100%;
+  max-width: 335px;
+  /* Memberikan ruang kosong fleksibel sebelum harga */
+  margin-right: 20px;
+}
+
+.menu-fitur-title {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.menu-itur-subtitle {
+  font-size: 14px;
+  color: #b0b0b0;
+}
+
+.menu-fitur-price {
+  color: #c99563;
+  font-weight: bold;
   font-size: 14px;
 }
 
+.menu-image {
+  width: 55%;
+  position: relative;
+  padding-bottom: 0;
+  display: flex;
+}
+
+.menu-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #ccc;
+  display: block;
+}
+
+.menu-image i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.galery {
+  padding: 30px 8%;
+  background-color: #fcfaf7;
+}
+
+.galeri-atas {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+}
+
+.galery-deskripsi p {
+  color: #a8744b;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 7px;
+}
+
+.galery-subititle {
+  font-size: 32px;
+  color: #0c0806;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.btn-galery-image-more {
+  background-color: white;
+  color: #0c0806;
+  border: 1px solid #e5dec9;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-galery-image-more:hover {
+  background-color: #0c0806;
+  color: white;
+}
+
+.galery-container-slider {
+  position: relative;
+  width: 100%;
+}
+
+.galery-container-slider i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+  z-index: 5;
+}
+
+.galery-container-slider i.bi-chevron-left {
+  left: -25px;
+}
+
+.galery-container-slider i.bi-chevron-right {
+  right: -25px;
+}
+
+.galery-container-slider i:hover {
+  transform: translateY(-50%) scale(1.08);
+}
+
+.galery-image {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.galery-image img {
+  flex: 1;
+  width: 25%;
+  height: 240px;
+  background-color: #d4d4d4;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+}
+
+.lokasi {
+  padding: 90px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  background: white;
+}
+
+.lokasi-deskripsi {
+  width: 45%;
+}
+
+.lokasi-title {
+  color: #a8744b;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.lokasi-subtitle {
+  font-size: 34px;
+  color: #0c0806;
+  margin-bottom: 35px;
+  line-height: 1.3;
+}
+
+.lokasi-fitur {
+  margin-bottom: 25px;
+  padding-left: 45px;
+  position: relative;
+}
+
+.lokasi-fitur i {
+  position: absolute;
+  left: 0;
+  top: 3px;
+  font-size: 22px;
+  color: #a8744b;
+}
+
+.lokasi-teks {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0c0806;
+  margin-bottom: 5px;
+}
+
+.lokasi-subteks {
+  color: #666;
+  line-height: 1.6;
+}
+
+.btn-lokasi {
+  display: inline-block;
+  margin-top: 15px;
+  background: #a8744b;
+  color: white;
+  text-decoration: none;
+  padding: 14px 24px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn-lokasi:hover {
+  background-color: #8b5d39;
+}
+
+.lokasi-image {
+  width: 55%;
+}
+
+.lokasi-image img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  background: #ccc;
+  border-radius: 12px;
+  display: block;
+}
+
+.lokasi-subtitle {
+  font-size: 34px;
+  color: #0e0a07;
+  margin-bottom: 35px;
+  line-height: 1.3;
+}
+
+.lokasi-fitur {
+  margin-bottom: 25px;
+  padding-left: 45px;
+  position: relative;
+}
+
+.lokasi-fitur i {
+  position: absolute;
+  left: 0;
+  top: 3px;
+  font-size: 22px;
+  color: #a8744b;
+}
+
+.lokasi-teks {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0e0a07;
+  margin-bottom: 5px;
+}
+
+.lokasi-subteks {
+  color: #666;
+  line-height: 1.6;
+}
+
+.btn-lokasi {
+  display: inline-block;
+  margin-top: 15px;
+  background: #a8744b;
+  color: white;
+  text-decoration: none;
+  padding: 14px 24px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn-lokasi:hover {
+  background-color: #8b5d39;
+}
+
+.lokasi-image {
+  width: 55%;
+}
+
+.lokasi-image img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  background: #ccc;
+  border-radius: 12px;
+  display: block;
+}
+
+.contact {
+  padding: 90px 8%;
+  background-color: #1d1410;
+}
+
+.contact-isi-full {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+.contact-deskripsi {
+  width: 30%;
+  text-align: left;
+}
+
+.contact-title {
+  color: #b8845a;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.contact-subtitle {
+  font-size: 32px;
+  color: white;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.contact-teks {
+  color: #d0d0d0;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.contact-fitur {
+  display: flex;
+  gap: 20px;
+  width: 70%;
+  justify-content: flex-end;
+}
+
+.contact-fitur-box-full {
+  background: #271b16;
+  flex: 1;
+  max-width: 360px;
+  padding: 30px 25px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-fitur-box {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+}
+
+.contact-fitur-box i {
+  text-decoration: none;
+  font-size: 38px;
+  color: #b8845a;
+  line-height: 1;
+}
+
+.contact-fitur-box-teks {
+  flex: 1;
+  text-align: left;
+}
+
+.contact-fitur-title {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.contact-fitur-subtitle {
+  color: #b0b0b0;
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+.btn-contact-fitur {
+  width: 100%;
+}
+
+.btn-contact {
+  display: block;
+  width: 100%;
+  background-color: #271b16;
+  border: 1px solid #a8744b;
+  color: white;
+  padding: 12px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.btn-contact:hover {
+  background-color: #a8744b;
+}
+
+.footer {
+  padding: 80px 8% 40px;
+  background-color: #16100c;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.footer-isi-full {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+.footer-isi {
+  width: 35%;
+  max-width: 340px;
+}
+
+.footer-nama {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.footer-logo {
+  width: 100%;
+  max-width: 95px;
+
+  background-color: transparent;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.footer-namasub {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.footer-subtitle {
+  color: white;
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+.footer-deskripsi {
+  color: #b0b0b0;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.footer-isi a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+.footer-isi a:hover {
+  background-color: #a8744b;
+  border-color: #a8744b;
+}
+
+.footer-isi i {
+  font-size: 16px;
+}
+
+.footer-chat li a {
+  text-decoration: none;
+}
+.fitur-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  gap: 40px;
+}
+
+.footer-fitur-box {
+  flex: 1;
+}
+
+.footer-fitur-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+.footer-fitur-box li {
+  list-style: none;
+  margin-bottom: 14px;
+}
+
+.footer-fitur-box li a {
+  text-decoration: none;
+  color: #b0b0b0;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-fitur-box li a:hover {
+  color: #b8845a;
+}
+
+.footer-fitur-subtitle {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+.footer-fitur-teks {
+  color: #b0b0b0;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.contact-item i {
+  color: #b8845a;
+  font-size: 16px;
+  margin-top: 2px;
+}
+
+.contact-item span {
+  color: #b0b0b0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.footer hr {
+  border: none;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.footer > div:last-child {
+  text-align: center;
+}
+
+.footer > div:last-child p {
+  color: #808080;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   RESPONSIVE ADD-ON — TABLET (max-width: 1024px)
+   Tempel blok ini di BAWAH file CSS desktop kamu.
+   Tidak ada kode desktop yang diubah/ditulis ulang.
+   ========================================================================== */
 @media (max-width: 1024px) {
-  html {
-    scroll-padding-top: 93px;
+  /* ========================================================================
+     1. HEADER / NAVBAR
+     ======================================================================== */
+  header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 18px 4%;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
   }
 
-  .kiri {
-    padding: 0 30px;
+  .logo-nama {
+    display: flex;
+    align-items: center;
+    width: 100%;
   }
 
-  .menu {
-    padding-right: 30px;
+  .CTA-AWAL {
+    display: none;
   }
 
-  .home {
-    padding: 40px;
+  .hamburger {
+    margin-left: auto;
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    cursor: pointer;
+    z-index: 1100;
+    transition: background-color 0.3s ease;
+  }
+
+  .hamburger::before,
+  .hamburger::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition:
+      transform 0.3s ease,
+      top 0.3s ease,
+      opacity 0.3s ease;
+  }
+
+  .hamburger::before {
+    top: -9px;
+  }
+  .hamburger::after {
+    top: 9px;
+  }
+
+  .hamburger.active {
+    background-color: transparent;
+  }
+  .hamburger.active::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+  .hamburger.active::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
-    min-height: auto;
-  }
-
-  .hero-text {
-    width: 55%;
-    padding: 0;
-  }
-
-  .JUDUL {
-    font-size: 38px;
-    white-space: normal;
-  }
-
-  .kata {
-    font-size: 18px;
-  }
-
-  .isi {
-    width: 45%;
-    padding-top: 0;
-  }
-
-  #About {
-    gap: 40px;
-    padding: 60px 40px;
-  }
-
-  .about-image {
-    width: 40%;
-    max-width: 350px;
-  }
-
-  .judul-about {
-    font-size: 28px;
-  }
-
-  .deskripsi-about {
+    width: 100%;
     max-width: 100%;
+    padding: 28px 5%;
+    box-sizing: border-box;
+    max-height: 70vh;
+    overflow-y: auto;
+    background-color: #1a1a1a;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+    transform: translateY(-16px) scaleY(0.96);
+    transform-origin: top;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+      transform 0.35s ease,
+      opacity 0.3s ease,
+      visibility 0.35s ease;
+    z-index: 1000;
+  }
+
+  .navbar.active {
+    transform: translateY(0) scaleY(1);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .navbar a {
+    font-size: 1.15rem;
+    padding-bottom: 8px;
+  }
+
+  .navbar a:hover {
+    border-bottom: 2px solid #c99563;
+    color: #c99563;
+  }
+
+  /* ========================================================================
+     2. HOME / HERO
+     ======================================================================== */
+  .home {
+    padding: 80px 6%;
+    min-height: min(600px, 80vh);
+  }
+
+  .home-subteks {
+    font-size: 4rem;
+    max-width: 620px;
+    margin-bottom: 24px;
+  }
+
+  .home-teks {
+    font-size: 1.15rem;
+    max-width: 560px;
+    margin-bottom: 32px;
+  }
+
+  .Menu-lokasi {
+    gap: 14px;
+  }
+
+  .menu-btn a.home-menu {
+    padding: 13px 26px;
+    font-size: 16px;
+  }
+
+  .lokasi-btn {
+    padding: 13px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Perbaikan: Memastikan konten tombol di tengah */
+  }
+
+  .lokasi-btn a.home-lokasi {
+    font-size: 16px;
+  }
+
+  .lokasi-btn i.bi-geo-alt {
     font-size: 15px;
+    margin-right: 6px; /* Memberi jarak aman dengan teks tombol */
+  }
+
+  /* ========================================================================
+     3. ABOUT
+     ======================================================================== */
+  .about {
+    padding: 80px 6%;
+    gap: 50px;
+  }
+
+  .about-image img:first-child {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 580 / 420;
+    object-fit: cover;
+  }
+
+  .about-image img:last-child {
+    width: 200px;
+    height: 200px;
+    right: -20px;
+    bottom: -20px;
+    object-fit: cover;
+  }
+
+  .about-subtitle {
+    font-size: 2.15rem;
+    margin-bottom: 20px;
+  }
+
+  .about-teks {
+    font-size: 1rem;
+    margin-bottom: 20px;
   }
 
   .about-fitur {
-    gap: 30px;
+    gap: 20px;
   }
 
-  .services {
-    padding: 60px 40px;
+  .about-fitur-judul {
+    font-size: 1.2rem;
   }
 
-  .services-title {
-    font-size: 32px;
+  /* ========================================================================
+     4. MENU
+     ======================================================================== */
+  .menu-deskripsi {
+    padding: 45px 40px;
+    width: 48%;
   }
 
-  .services-fitur {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
+  .menu-subtitle {
+    font-size: 1.75rem;
   }
 
-  .fitur-box-services {
-    margin-top: 0;
-    padding: 25px 20px;
+  .menu-fitur-teks {
+    max-width: 260px;
   }
 
-  .fitur-text-services {
-    max-width: 100%;
+  .menu-image {
+    width: 52%;
   }
-  #Portofolio {
-    background-color: white;
+
+  /* ========================================================================
+     5. GALERI (Fix Typo .galery -> .galeri sesuai kecenderungan HTML Indonesia)
+     ======================================================================== */
+  .galeri {
+    /* Perbaikan: Sesuaikan tulisan huruf i/y dengan class HTML Anda */
+    padding: 26px 6%;
+    overflow: hidden; /* Mencegah seluruh halaman web jebol ke samping */
+  }
+
+  .galery {
+    font-size: 1rem;
+  }
+
+  .galeri-subtitle {
+    /* Perbaikan typo subititle */
+    font-size: 2rem;
+  }
+
+  /* Kontainer pembungkus semua gambar */
+  .galeri-image {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 80px 60px; /* atas-bawah 80px, kiri-kanan 60px */
+    gap: 1px;
+    justify-content: center; /* KUNCI UTAMA: Memaksa semua gambar berkumpul tepat di tengah halaman */
+    align-items: center; /* Menjaga keseimbangan vertikal */
+    width: 100%; /* Memenuhi lebar layar */
     box-sizing: border-box;
   }
 
-  .title-portofolio {
-    font-size: 16px;
-    color: #1d4ed8;
+  /* Elemen Gambar di dalam galeri */
+  .galeri-image img {
+    height: 220px; /* Atur tinggi ideal di tablet/desktop kecil */
+    aspect-ratio: 4 / 3; /* MEMAKSA rasio foto landscape tradisional (PENTING!) */
+    object-fit: cover; /* TRIK UTAMA: Memotong otomatis sisi foto agar tidak gepeng */
+    flex-shrink: 0; /* MENCEGAH browser meremas lebar gambar ke samping */
+    scroll-snap-align: start; /* Mengunci posisi gambar saat digeser */
+    border-radius: 12px; /* Menjaga kelengkungan sudut tetap estetik */
   }
 
-  .portofolio-fitur {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    gap: 50px;
-  }
-
-  .portofolio-fitur-box {
-    background-color: aliceblue;
-    padding: 40px;
-    border-radius: 8px;
-    margin-top: 20px;
-  }
-
-  .portofolio-gambar {
-    width: 100%;
-    max-width: 490px;
-    border-radius: 8px;
-  }
-
-  .portofolio-fitur-title {
-    font-size: 30px;
-    font-weight: 500;
-  }
-
-  .btn-portofolio {
-    display: inline-flex;
-    align-items: center;
-
-    background-color: blue;
-    padding: 15px;
-    margin-right: 80px;
-    border-radius: 8px;
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    font-weight: 500;
-
-    transition: 0.2s;
-  }
-
-  .btn-portofolio:hover {
-    transform: translateY(-5px);
-  }
-
-  .contact {
-    padding: 60px 40px;
-  }
-
-  .box-contact {
-    padding: 40px;
-    gap: 30px;
-  }
-
-  .contact-titlee,
-  .contact-title {
-    font-size: 30px;
-  }
-
-  .fitur-text-contact {
-    font-size: 16px;
-  }
-
-  .wa-button {
-    margin-right: 0;
-    padding: 18px 30px;
+  .galeri-container-slider i {
+    width: 44px;
+    height: 44px;
     font-size: 18px;
-    flex-shrink: 0;
   }
 
-  .wa-button i {
-    font-size: 35px;
+  .galeri-container-slider i.bi-chevron-left {
+    left: -20px;
+  }
+  .galeri-container-slider i.bi-chevron-right {
+    right: -20px;
   }
 
-  .footer {
-    padding: 70px 40px 25px;
-  }
-
-  .footer-container {
-    gap: 50px;
-  }
-
-  .footer-links {
+  /* ========================================================================
+     6. LOKASI
+     ======================================================================== */
+  .lokasi {
+    padding: 70px 6%;
     gap: 40px;
   }
 
-  .footer-logo {
-    font-size: 26px;
+  .lokasi-subtitle {
+    font-size: 2.125rem;
   }
 
-  .footer-description {
-    font-size: 14px;
+  .lokasi-image img {
+    height: 340px;
+    object-fit: cover;
+  }
+
+  /* ========================================================================
+     7. CONTACT
+     ======================================================================== */
+  .contact {
+    padding: 70px 6%;
+  }
+
+  .contact-isi-full {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 40px;
+  }
+
+  .contact-deskripsi {
+    width: 100%;
+    max-width: 640px;
+  }
+
+  .contact-fitur {
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .contact-fitur-box-full {
+    flex: 1 1 260px;
+    max-width: 340px;
+  }
+
+  .contact-subtitle {
+    font-size: 2rem;
+  }
+
+  /* ========================================================================
+     8. FOOTER
+     ======================================================================== */
+  .footer {
+    padding: 60px 6% 35px;
+    gap: 45px;
+  }
+
+  .footer-isi-full {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .footer-isi {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .footer-title {
+    font-size: 1.85rem;
+  }
+
+  .footer-subtitle {
+    font-size: 1.45rem;
+  }
+
+  .fitur-footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 40px;
+    width: 100%;
+  }
+
+  .footer-fitur-title {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 820px) {
+  /* ========================================================================
+     1. HEADER / NAVBAR
+     ======================================================================== */
+  header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 18px 4%;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+  }
+
+  .logo-nama {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .CTA-AWAL {
+    display: none;
+  }
+
+  .hamburger {
+    margin-left: auto;
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    cursor: pointer;
+    z-index: 1100;
+    transition: background-color 0.3s ease;
+  }
+
+  .hamburger::before,
+  .hamburger::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition:
+      transform 0.3s ease,
+      top 0.3s ease,
+      opacity 0.3s ease;
+  }
+
+  .hamburger::before {
+    top: -9px;
+  }
+  .hamburger::after {
+    top: 9px;
+  }
+
+  .hamburger.active {
+    background-color: transparent;
+  }
+  .hamburger.active::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+  .hamburger.active::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 100%;
+    padding: 28px 5%;
+    box-sizing: border-box;
+    max-height: 70vh;
+    overflow-y: auto;
+    background-color: #1a1a1a;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+    transform: translateY(-16px) scaleY(0.96);
+    transform-origin: top;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+      transform 0.35s ease,
+      opacity 0.3s ease,
+      visibility 0.35s ease;
+    z-index: 1000;
+  }
+
+  .navbar.active {
+    transform: translateY(0) scaleY(1);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .navbar a {
+    font-size: 1.15rem;
+    padding-bottom: 8px;
+  }
+
+  /* ========================================================================
+     2. HOME / HERO
+     ======================================================================== */
+  .home {
+    padding: 80px 6%;
+    min-height: min(600px, 80vh);
+  }
+
+  .home-subteks {
+    font-size: 4rem;
+    max-width: 620px;
+    margin-bottom: 24px;
+  }
+
+  .home-teks {
+    font-size: 1.15rem;
+    max-width: 560px;
+    margin-bottom: 32px;
+  }
+
+  .Menu-lokasi {
+    gap: 14px;
+  }
+
+  .menu-btn a.home-menu {
+    padding: 13px 26px;
+    font-size: 16px;
+  }
+
+  .lokasi-btn {
+    padding: 13px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Perbaikan: Memastikan konten tombol di tengah */
+  }
+
+  .lokasi-btn a.home-lokasi {
+    font-size: 16px;
+  }
+
+  .lokasi-btn i.bi-geo-alt {
+    font-size: 15px;
+    margin-right: 6px; /* Memberi jarak aman dengan teks tombol */
+  }
+
+  /* ========================================================================
+     3. ABOUT
+     ======================================================================== */
+  .about {
+    padding: 55px 6%;
+    gap: 50px;
+  }
+
+  .about-image img:first-child {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 580 / 420;
+    object-fit: cover;
+  }
+
+  .about-image img:last-child {
+    width: 160px;
+    height: 160px;
+    right: -20px;
+    bottom: -20px;
+    object-fit: cover;
+  }
+
+  .about-subtitle {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .about-teks {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .about-fitur {
+    gap: 20px;
+  }
+
+  .about-fitur-judul {
+    font-size: 1rem;
+  }
+
+  .about-fitur-subjudul {
+    font-size: 0.8rem;
+  }
+
+  /* ========================================================================
+     4. MENU
+     ======================================================================== */
+  .menu-deskripsi {
+    padding: 45px 40px;
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .menu-subtitle {
+    font-size: 1.6rem;
+  }
+
+  .menu-fitur-box {
+    gap: 5px;
+  }
+
+  .menu-fitur-teks {
+    max-width: 230px;
+  }
+
+  .menu-image {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  /* ========================================================================
+     5. GALERI (Fix Typo .galery -> .galeri sesuai kecenderungan HTML Indonesia)
+     ======================================================================== */
+  .galeri {
+    /* Perbaikan: Sesuaikan tulisan huruf i/y dengan class HTML Anda */
+    padding: 26px 6%;
+    overflow: hidden; /* Mencegah seluruh halaman web jebol ke samping */
+  }
+
+  .galery {
+    font-size: 1rem;
+  }
+
+  .galeri-subtitle {
+    /* Perbaikan typo subititle */
+    font-size: 2rem;
+  }
+
+  /* Kontainer pembungkus semua gambar */
+  .galeri-image {
+    display: flex;
+    gap: 1px;
+    justify-content: center; /* KUNCI UTAMA: Memaksa semua gambar berkumpul tepat di tengah halaman */
+    align-items: center; /* Menjaga keseimbangan vertikal */
+    width: 100%; /* Memenuhi lebar layar */
+    box-sizing: border-box;
+  }
+
+  /* Elemen Gambar di dalam galeri */
+  .galeri-image img {
+    height: 220px; /* Atur tinggi ideal di tablet/desktop kecil */
+    aspect-ratio: 4 / 3; /* MEMAKSA rasio foto landscape tradisional (PENTING!) */
+    object-fit: cover; /* TRIK UTAMA: Memotong otomatis sisi foto agar tidak gepeng */
+    flex-shrink: 0; /* MENCEGAH browser meremas lebar gambar ke samping */
+    scroll-snap-align: start; /* Mengunci posisi gambar saat digeser */
+    border-radius: 12px; /* Menjaga kelengkungan sudut tetap estetik */
+  }
+
+  .galeri-container-slider i {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+  }
+
+  .galeri-container-slider i.bi-chevron-left {
+    left: -20px;
+  }
+  .galeri-container-slider i.bi-chevron-right {
+    right: -20px;
+  }
+
+  /* ========================================================================
+     6. LOKASI
+     ======================================================================== */
+  .lokasi {
+    padding: 70px 6%;
+    gap: 40px;
+  }
+
+  .lokasi-subtitle {
+    font-size: 2.125rem;
+  }
+
+  .lokasi-image img {
+    height: 340px;
+    object-fit: cover;
+  }
+
+  /* ========================================================================
+     7. CONTACT
+     ======================================================================== */
+  .contact {
+    padding: 70px 6%;
+  }
+
+  .contact-isi-full {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 40px;
+  }
+
+  .contact-deskripsi {
+    width: 100%;
+    max-width: 640px;
+  }
+
+  .contact-fitur {
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .contact-fitur-box-full {
+    flex: 1 1 260px;
+    max-width: 340px;
+  }
+
+  .contact-subtitle {
+    font-size: 2rem;
+  }
+
+  /* ========================================================================
+     8. FOOTER
+     ======================================================================== */
+  .footer {
+    padding: 60px 6% 35px;
+    gap: 45px;
+  }
+
+  .footer-isi-full {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .footer-isi {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .footer-title {
+    font-size: 1.85rem;
+  }
+
+  .footer-subtitle {
+    font-size: 1.45rem;
+  }
+
+  .fitur-footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 40px;
+    width: 100%;
+  }
+
+  .footer-fitur-title {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
   }
 }
 
 @media (max-width: 768px) {
   html {
-    scroll-padding-top: 86px;
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
   }
-  .hamburger {
-    display: block;
+  /* --- Header container ------------------------------------------------- */
+  header {
+    padding: 14px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+  }
+
+  /* --- Logo & Teks (fluid scaling, tidak makan tempat) ------------------ */
+  .logo {
+    max-width: 64px;
   }
 
   .nama {
-    font-size: 25px;
+    font-size: 1.6rem;
+    letter-spacing: 0.5px;
   }
 
-  .logo {
-    width: 55px;
+  .subnama {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-top: 3px;
   }
 
-  .menu {
+  /* --- Sembunyikan CTA desktop -------------------------------------------
+     (kalau CTA ingin tetap tampil di dalam menu mobile, taruh markup CTA
+     yang sama DI DALAM .navbar di HTML, styling akan ikut aturan
+     .navbar a / elemen dropdown di bawah) */
+  .CTA-AWAL {
     display: none;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    margin-top: 20px;
-    padding: 0;
   }
 
-  .menu li a {
-    font-size: 20px;
-    text-align: start;
+  /* --- Hamburger button ---------------------------------------------------
+     Dibuat dari 1 elemen (garis tengah) + ::before & ::after (garis atas/bawah)
+     supaya TIDAK perlu ubah struktur HTML (tidak butuh <span> tambahan).
+     Toggle class .active via JavaScript untuk animasi jadi silang (X)
+     dan untuk membuka/menutup .navbar.
+  ------------------------------------------------------------------------- */
+  .hamburger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    cursor: pointer;
+    z-index: 1100;
+    transition: background-color 0.3s ease;
+  }
+
+  .hamburger::before,
+  .hamburger::after {
+    content: "";
+    position: absolute;
+    left: 0;
     width: 100%;
-    margin-left: 0;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition:
+      transform 0.3s ease,
+      top 0.3s ease,
+      opacity 0.3s ease;
   }
 
-  .menu.active {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    width: 100%;
-    padding: 20px 0;
+  .hamburger::before {
+    top: -9px;
   }
 
-  .menu li a:hover {
-    transition: 0.2s;
+  .hamburger::after {
+    top: 9px;
   }
 
+  /* State aktif: hamburger berubah jadi tanda silang (X) */
+  .hamburger.active {
+    background-color: transparent; /* garis tengah hilang */
+  }
+
+  .hamburger.active::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  .hamburger.active::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  /* --- Navbar mobile: dropdown horizontal penuh, turun dari atas ---------
+     Posisinya menempel tepat di bawah header (top: 100%), bukan fixed
+     dari puncak viewport, supaya logo & hamburger di header tetap terlihat
+     saat menu terbuka.
+  ------------------------------------------------------------------------- */
   .navbar {
-    padding: 10px 25px;
-    align-items: stretch;
+    position: absolute;
+    top: 100%;
+    left: 0;
     flex-direction: column;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  }
-
-  .nav-top {
-    display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 24px;
+
     width: 100%;
+    max-width: 100%;
+    padding: 32px 5%;
+    box-sizing: border-box;
+
+    max-height: 70vh;
+    overflow-y: auto; /* jaga-jaga kalau item menu banyak di layar pendek */
+
+    background-color: #1a1a1a; /* sesuaikan dengan design token warnamu */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+
+    /* Animasi turun dari atas: geser dari -16px lalu fade + scale in */
+    transform: translateY(-16px) scaleY(0.96);
+    transform-origin: top;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+      transform 0.35s ease,
+      opacity 0.3s ease,
+      visibility 0.35s ease;
+    z-index: 1000;
   }
 
-  .kiri {
-    padding: 0;
-    gap: 10px;
-    align-items: center;
-    display: flex;
-    justify-content: flex-start;
+  /* Class ini yang di-toggle lewat JavaScript (misal: navbar.classList.toggle('active')) */
+  .navbar.active {
+    transform: translateY(0) scaleY(1);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
 
+  .navbar a {
+    font-size: 1.3rem;
+    padding-bottom: 6px;
+  }
+
+  /* --- (Opsional) Overlay gelap di belakang dropdown ----------------------
+     Tambahkan <div class="nav-overlay"></div> di HTML sebelum/di luar .navbar
+     lalu toggle class .active bersamaan dengan .navbar untuk efek dim background.
+  ------------------------------------------------------------------------- */
+  .nav-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease;
+    z-index: 999;
+  }
+
+  .nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  /* --- Section utama ------------------------------------------------------
+     Ganti padding statis & min-height fix agar tidak membuat area kosong
+     raksasa di layar pendek, dan tidak overflow di layar sangat sempit
+  ------------------------------------------------------------------------- */
   .home {
+    background-image: url(home.jpg);
+    background-size: cover;
+    background-position: center center;
+    min-height: 100dvh;
+
+    /* ✅ PERBAIKAN DI SINI */
+    padding: 200px 6% 60px; /* top diperbesar, bottom dikasih ruang */
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    align-items: center;
-    padding: 90px 0px;
-    min-height: 87vh;
+    justify-content: flex-start; /* ← GANTI dari 'center' ke 'flex-start' */
+
+    color: white;
   }
 
-  .hero-text {
-    width: 100%;
-    max-width: 600px;
-    padding: 0;
+  /* --- Judul besar ----------------------------------------------------------
+     78px -> fluid, tetap besar & estetik tapi tidak memicu overflow-x
+  ------------------------------------------------------------------------- */
+  .home-subteks {
+    font-size: 3rem;
+    line-height: 1.15;
+    max-width: 100%;
+    margin-bottom: 20px;
   }
 
-  .subjudul {
-    font-size: 16px;
+  /* --- Paragraf deskripsi ---------------------------------------------- */
+  .home-teks {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    max-width: 100%;
+    margin-bottom: 28px;
   }
 
-  .JUDUL {
-    font-size: 40px;
-    white-space: normal;
-    line-height: 1.1;
-  }
-
-  .kata {
-    font-size: 25x;
-  }
-
-  .deskripsi {
-    font-size: 20px;
-    line-height: 1.1;
-    width: 100%;
-  }
-
-  .getour {
-    justify-content: start;
-  }
-
-  .get,
-  .our {
-    font-size: 20px;
-  }
-
-  .isi {
-    width: 100%;
-    max-width: 600px;
+  /* --- Kontainer tombol ---------------------------------------------------
+     Susun vertikal (stack) & full-width supaya tap target besar,
+     rapi, dan tidak pernah overflow ke samping
+  ------------------------------------------------------------------------- */
+  .Menu-lokasi {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
     margin-top: 20px;
   }
 
-  #About {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
+  /* --- Tombol 1: Lihat Menu ---------------------------------------------- */
+  .menu-btn a.home-menu {
     width: 100%;
-    max-width: 100%;
-    padding: 40px;
-    padding-top: 80px;
-  }
-
-  .hero-text-about {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .judul-about {
-    font-size: 30px;
-    line-height: 1.1;
-  }
-
-  .deskripsi-about {
-    font-size: 22px;
-    line-height: 1.4;
-    max-width: 100%;
-  }
-
-  .about-fitur {
-    display: flex;
-    gap: 80px;
-  }
-
-  .fitur-title {
-    font-size: 22px;
-    margin-bottom: 10px;
-  }
-
-  .fitur-box {
-    padding-bottom: 10px;
-    border-bottom: 1px solid #ddd;
-  }
-
-  .fitur-text {
-    font-size: 18px;
-  }
-
-  .about-image {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .services {
-    background-color: #f5f7fb;
-    padding: 70px 30px;
-    padding-top: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
-  }
-
-  .services-subtitle {
-    color: #2563eb;
-    font-size: 18px;
-  }
-
-  .services-title {
-    font-size: 40px;
-  }
-
-  .text-services {
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-  }
-
-  .services-fitur {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-  }
-
-  .fitur-box-services {
-    background-color: white;
-    padding: 20px;
-    border-radius: 15px;
-  }
-
-  .icon-services {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: #eef2ff;
-    color: #2563eb;
-    font-size: 25px;
-  }
-
-  .fitur-title-services {
-    text-align: start;
-    font-size: 20px;
-  }
-
-  .line-services {
-    width: 17px;
-    height: 2px;
-    background: #2563eb;
-    border-radius: 10px;
-    margin: 15px 0 15px;
-  }
-
-  .fitur-text-services {
-    text-align: start;
-    line-height: 1.5;
-    font-size: 15px;
-    max-width: 100%;
-  }
-
-  #Portofolio {
-    padding-top: 20px;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 50px;
-    min-height: 87vh;
+    padding: 14px 20px;
+    font-size: 1.05rem;
     box-sizing: border-box;
   }
 
-  .title-portofolio {
-    font-size: 18px;
-    color: #1d4ed8;
+  /* --- Tombol 2: Lokasi Kami ---------------------------------------------- */
+  .lokasi-btn {
+    width: 100%;
+    padding: 14px 20px;
+    box-sizing: border-box;
   }
 
-  .subtitle-portofolio {
-    font-size: 40px;
+  .lokasi-btn a.home-lokasi {
+    font-size: 1.05rem;
   }
 
-  .portofolio-fitur {
-    margin-top: 20px;
-    display: flex;
+  .lokasi-btn i.bi-geo-alt {
+    font-size: 0.9rem;
+  }
+
+  .about {
     flex-direction: column;
-    justify-content: center;
-    gap: 30px;
+    padding: 60px 6%;
+    gap: 45px;
   }
 
-  .portofolio-fitur-box {
-    background-color: aliceblue;
-    padding: 40px;
-    border-radius: 8px;
-    margin-top: 20px;
-  }
-
-  .portofolio-gambar {
+  /* --- Gambar & deskripsi full-width di layar sempit --------------------- */
+  .about-image,
+  .about-deskripsi {
     width: 100%;
-    max-width: 490px;
-    border-radius: 8px;
   }
 
-  .portofolio-fitur-title {
-    font-size: 30px;
-    font-weight: 500;
+  /* --- Gambar utama: fluid, jaga rasio dengan aspect-ratio --------------- */
+  .about-image img:first-child {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 580 / 420;
+    border-radius: 10px;
   }
 
-  .btn-portofolio {
-    display: inline-flex;
-    align-items: center;
-
-    background-color: blue;
-    padding: 15px;
-    margin-right: 80px;
-    border-radius: 8px;
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    font-weight: 500;
-
-    transition: 0.2s;
+  /* --- Gambar kecil (overlap): dikecilkan & offset diperkecil -----------
+     Offset -40px/-30px versi desktop terlalu jauh untuk container mobile
+     yang full-width -> berisiko bikin scrollbar horizontal.
+  ------------------------------------------------------------------------- */
+  .about-image img:last-child {
+    width: 160px;
+    height: 160px;
+    right: -12px;
+    bottom: -12px;
+    border-width: 3px;
   }
 
-  .btn-portofolio:hover {
-    transform: translateY(-5px);
+  /* --- Teks-teks: fluid typography --------------------------------------- */
+  .about-title {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
   }
 
-  .contact {
-    padding: 60px 20px;
+  .about-subtitle {
+    font-size: 2.25rem;
+    margin-bottom: 15px;
   }
 
-  .box-contact {
+  .about-teks {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
+  }
+
+  /* --- Fitur box: dari row -> column supaya tiap fitur punya ruang baca -- */
+  .about-fitur {
     display: flex;
-    align-items: center;
-    padding: 45px 40px;
-    gap: 30px;
-    border-radius: 25px;
+    gap: 26px;
   }
 
-  .text-contact {
-    max-width: 100%;
+  .abaout-fitur-box i {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
   }
 
-  .subtitle-contact {
-    font-size: 13px;
-    margin-bottom: 15px;
+  .about-fitur-judul {
+    font-size: 1.15rem;
   }
 
-  .contact-titlee,
-  .contact-title {
-    font-size: 30px;
-    margin-bottom: 15px;
+  .about-fitur-subjudul {
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
 
-  .fitur-text-contact {
-    font-size: 15px;
-    line-height: 1.5;
-  }
-
-  .wa-button {
-    width: 100%;
-    justify-content: center;
-    margin-right: 0;
-    padding: 15px 21px;
-    font-size: 16px;
-    border-radius: 18px;
-  }
-
-  .wa-button i {
-    font-size: 30px;
-  }
-}
-
-@media (max-width: 576px) {
-  html {
-    scroll-padding-top: 65px;
-  }
-  .hamburger {
-    display: block;
-  }
-
-  .nama {
-    font-size: 20px;
-  }
-
-  .logo {
-    width: 40px;
-  }
-
+  /* --- Container utama: dari row -> column, tinggi mengikuti konten ------ */
   .menu {
-    display: none;
     flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    margin-top: 20px;
-    padding: 0;
+    min-height: auto;
   }
 
-  .menu li a {
-    text-align: center;
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .menu.active {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    width: 100%;
-    padding: 20px 0;
-  }
-
-  .menu li a:hover {
-    transition: 0.2s;
-  }
-
-  .navbar {
-    padding: 5px 20px;
-    align-items: stretch;
-    flex-direction: column;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  }
-
-  .nav-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .kiri {
-    padding: 0;
-    gap: 10px;
-    align-items: center;
-    display: flex;
-    justify-content: flex-start;
-  }
-
-  .home {
-    flex-direction: column;
-    align-items: center;
-    text-align: start;
-    padding: 40px 20px;
-    gap: 30px;
-  }
-
-  .hero-text {
+  /* --- Panel deskripsi (teks) -------------------------------------------- */
+  .menu-deskripsi {
     width: 100%;
     max-width: 100%;
-    padding: 0;
+    padding: 50px 6%;
+    align-items: stretch;
   }
 
-  .subjudul {
-    font-size: 12px;
+  .menu-title {
+    font-size: 0.75rem;
+    margin-bottom: 8px;
   }
 
-  .JUDUL {
-    margin-top: 12px;
-    font-size: 28px;
-    white-space: normal;
-    line-height: 1.1;
+  .menu-subtitle {
+    font-size: 1.75rem;
+    line-height: 1.3;
+    margin-bottom: 24px;
   }
 
-  .kata {
-    font-size: 15px;
+  /* --- List fitur/menu item ------------------------------------------------ */
+  .menu-fitur {
+    gap: 16px;
   }
 
-  .deskripsi {
-    margin-top: 10px;
-    font-size: 14px;
-    width: 100%;
-    margin-bottom: 18px;
-  }
-
-  .getour {
-    margin-top: 10px;
-    justify-content: start;
+  .menu-fitur-box {
+    gap: 12px;
+    padding-bottom: 10px;
     flex-wrap: wrap;
   }
 
-  .get,
-  .our {
-    font-size: 16px;
-    padding: 12px 13px;
+  .menu-fitur-box img {
+    width: 50px;
+    max-width: 50px;
+    height: 50px;
   }
 
-  .isi {
-    width: 100%;
-    max-width: 450px;
-    padding-top: 10px;
-  }
-
-  #About {
-    display: flex;
-    flex-direction: column-reverse;
-    width: 100%;
-    align-items: center;
-    max-width: 768px;
-    gap: 40px;
-  }
-
-  .judul-about {
-    font-size: 23px;
-    line-height: 1.1;
-  }
-
-  .deskripsi-about {
-    font-size: 16px;
-    line-height: 1.4;
+  /* max-width 335px statis berisiko overflow di layar < 375px,
+     jadi dibuat fleksibel mengikuti sisa ruang setelah gambar */
+  .menu-fitur-teks {
+    flex: 1;
+    width: auto;
     max-width: 100%;
+    margin-right: 10px;
   }
 
-  .about-fitur {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 7px;
+  .menu-fitur-title {
+    font-size: 1rem;
   }
 
-  .fitur-title {
-    font-size: 15px;
-    margin-bottom: 10px;
+  .menu-itur-subtitle {
+    font-size: 0.8rem;
   }
 
-  .fitur-box {
-    padding-bottom: 10px;
-    border-bottom: 1px solid #ddd;
+  .menu-fitur-price {
+    font-size: 0.85rem;
   }
 
-  .fitur-text {
-    font-size: 12px;
-  }
-
-  .about-image {
+  /* --- Panel gambar -------------------------------------------------------
+     Perlu min-height eksplisit karena saat .menu jadi column, "height: 100%"
+     pada img kehilangan konteks tinggi dari parent (sebelumnya diwarisi
+     dari align-items: stretch di layout row)
+  ------------------------------------------------------------------------- */
+  .menu-image {
     width: 100%;
     max-width: 100%;
+    min-height: 260px;
   }
 
-  .services {
-    background-color: #f5f7fb;
-    padding: 60px 20px;
-    padding-top: 30px;
-    display: flex;
+  .menu-image i {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  /* --- Section wrapper ---------------------------------------------------- */
+  .galery {
+    padding: 24px 5%;
+  }
+
+  /* --- Header galeri: judul & tombol ditumpuk, bukan berdampingan -------- */
+  .galeri-atas {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 28px;
   }
 
-  .services-subtitle {
-    color: #2563eb;
-    font-size: 15px;
+  .galery-subititle {
+    font-size: 1.75rem;
+    line-height: 1.3;
   }
 
-  .services-title {
-    font-size: 30px;
+  .btn-galery-image-more {
+    padding: 10px 20px;
+    font-size: 0.85rem;
   }
 
-  .text-services {
-    justify-content: center;
-    align-items: center;
-    font-size: 15px;
+  /* --- Panah navigasi -------------------------------------------------------
+     Offset -25px versi desktop akan keluar dari area .galery (padding 8%)
+     dan memicu scrollbar horizontal di layar sempit -> dipindah ke dalam
+  ------------------------------------------------------------------------- */
+  .galery-container-slider i {
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
   }
 
-  .services-fitur {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
+  .galery-container-slider i.bi-chevron-left {
+    left: 8px;
   }
 
-  .fitur-box-services {
-    background-color: white;
-    padding: 20px;
-    border-radius: 15px;
+  .galery-container-slider i.bi-chevron-right {
+    right: 8px;
   }
 
-  .icon-services {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: #eef2ff;
-    color: #2563eb;
+  /* --- Galeri gambar: dari flex 4-kolom kaku -> horizontal scroll snap ---
+     4 gambar @25% lebar akan jadi sangat sempit & memanjang (tidak
+     proporsional) kalau dipaksa tetap sejajar di layar HP. Diubah jadi
+     carousel swipeable: tiap gambar dapat lebar nyaman (78vw) dan
+     "nempel" rapi saat digeser (scroll-snap).
+  ------------------------------------------------------------------------- */
+  .galery-image {
+    gap: 14px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 16px;
+
+    /* Sembunyikan scrollbar bawaan browser, tetap bisa discroll/swipe */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .galery-image::-webkit-scrollbar {
+    display: none;
+  }
+
+  .galery-image img {
+    flex: 0 0 auto;
+    width: 78vw;
+    max-width: 320px;
+    height: 220px;
+    scroll-snap-align: start;
+  }
+
+  /* --- Container utama: dari row -> column ------------------------------ */
+  .lokasi {
+    flex-direction: column-reverse;
+    padding: 50px 6%;
+    gap: 36px;
+  }
+
+  /* --- Deskripsi & gambar full-width -------------------------------------- */
+  .lokasi-deskripsi,
+  .lokasi-image {
+    width: 100%;
+  }
+
+  /* --- Teks-teks: fluid typography --------------------------------------- */
+  .lokasi-title {
+    font-size: 0.75rem;
+    margin-bottom: 8px;
+  }
+
+  .lokasi-subtitle {
+    font-size: 2rem;
+    margin-bottom: 24px;
+  }
+
+  /* --- Item fitur (ikon + teks) ------------------------------------------- */
+  .lokasi-fitur {
+    padding-left: 38px;
+    margin-bottom: 20px;
+  }
+
+  .lokasi-fitur i {
     font-size: 20px;
   }
 
-  .fitur-title-services {
-    text-align: start;
-    font-size: 15px;
+  .lokasi-teks {
+    font-size: 1.05rem;
   }
 
-  .line-services {
-    width: 17px;
-    height: 2px;
-    background: #2563eb;
-    border-radius: 10px;
-    margin: 15px 0 15px;
+  .lokasi-subteks {
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
 
-  .fitur-text-services {
-    text-align: start;
-    line-height: 1.5;
-    font-size: 11px;
-    max-width: 100%;
-  }
-
-  #Portofolio {
-    padding-top: 20px;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 30px;
-    min-height: 87vh;
+  /* --- Tombol: full-width supaya tap target nyaman & rapi ----------------- */
+  .btn-lokasi {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 14px 20px;
     box-sizing: border-box;
   }
 
-  .title-portofolio {
-    font-size: 18px;
-    color: #1d4ed8;
+  /* --- Gambar: tinggi statis 420px diturunkan agar proporsional ---------- */
+  .lokasi-image img {
+    height: 260px;
+    margin-bottom: 17px;
   }
 
-  .subtitle-portofolio {
-    font-size: 30px;
-  }
-
-  .portofolio-fitur {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  .portofolio-fitur-box {
-    background-color: aliceblue;
-    padding: 30px;
-    border-radius: 8px;
-    margin-top: 20px;
-  }
-
-  .portofolio-gambar {
-    width: 100%;
-    max-width: 490px;
-    border-radius: 8px;
-  }
-
-  .portofolio-fitur-title {
-    font-size: 20px;
-    font-weight: 500;
-  }
-
-  .btn-portofolio {
-    display: inline-flex;
-    align-items: center;
-
-    background-color: blue;
-    padding: 15px;
-    margin-right: 80px;
-    border-radius: 8px;
-    text-decoration: none;
-    color: white;
-    font-size: 15px;
-    font-weight: 500;
-
-    transition: 0.2s;
-  }
-
-  .btn-portofolio:hover {
-    transform: translateY(-5px);
-  }
-
+  /* --- Section wrapper ----------------------------------------------------- */
   .contact {
-    padding: 60px 20px;
+    padding: 55px 6%;
   }
 
-  .box-contact {
+  /* --- Container utama ----------------------------------------------------- */
+  .contact-isi-full {
+    display: flex; /* Pastikan flexbox aktif */
     flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
-    gap: 30px;
-    border-radius: 25px;
+    align-items: stretch; /* JINAKKAN CENTER DESKTOP: paksa lebar 100% */
+    justify-content: flex-start; /* Paksa konten menumpuk rapat ke atas */
+    gap: 28px;
+    height: auto !important; /* Reset tinggi halaman */
   }
 
-  .text-contact {
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .subtitle-contact {
-    font-size: 13px;
-    margin-bottom: 15px;
-  }
-
-  .contact-titlee,
-  .contact-title {
-    font-size: 30px;
-    margin-bottom: 15px;
-  }
-
-  .fitur-text-contact {
-    font-size: 15px;
-    line-height: 1.5;
-  }
-
-  .wa-button {
+  /* --- Blok title, subtitle, deskripsi ------------------------------------- */
+  .contact-deskripsi {
     width: 100%;
-    justify-content: center;
-    margin-right: 0;
-    padding: 15px 21px;
-    font-size: 16px;
-    border-radius: 18px;
   }
 
-  .wa-button i {
-    font-size: 30px;
-  }
-  .services-fitur {
-    grid-template-columns: 1fr;
+  .contact-title {
+    font-size: 0.75rem;
   }
 
-  .about-fitur {
-    grid-template-columns: 1fr;
-    gap: 15px;
+  .contact-subtitle {
+    font-size: 1.85rem;
+    margin-bottom: 12px;
   }
 
-  .fitur-box {
-    padding-bottom: 10px;
+  .contact-teks {
+    font-size: 0.95rem;
   }
 
-  .footer {
-    padding: 60px 20px 20px;
-  }
-
-  .footer-container {
+  /* --- Fitur box 1, 2, 3 --------------------------------------------------- */
+  .contact-fitur {
+    display: flex; /* Pastikan flexbox aktif */
     flex-direction: column;
+    align-items: stretch; /* Paksa kartu melebar penuh ke samping */
+    justify-content: flex-start; /* Singkirkan ruang kosong vertikal berlebih */
+    width: 100%;
+    gap: 16px;
+    height: auto !important; /* Reset tinggi */
+  }
 
+  .contact-fitur-box-full {
+    flex: none !important; /* MEMATIKAN EFEK MELAR DESKTOP (SANGAT PENTING) */
+    width: 100%;
+    max-width: 100%;
+    height: auto !important; /* Memaksa tinggi menciut pas dengan tombol */
+    padding: 24px 20px;
+    gap: 16px;
+    box-sizing: border-box; /* Mengamankan padding */
+  }
+
+  .contact-fitur-box i {
+    font-size: 32px;
+  }
+
+  .contact-fitur-title {
+    font-size: 1.05rem;
+  }
+
+  .contact-fitur-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .btn-contact {
+    padding: 12px 0;
+    font-size: 0.8rem;
+  }
+
+  /* --- Section wrapper ----------------------------------------------------- */
+  .footer {
+    padding: 60px 6% 30px;
     gap: 40px;
   }
 
-  .footer-brand {
+  /* --- Baris utama: brand (kiri) & kolom fitur (kanan) -> ditumpuk -------- */
+  .footer-isi-full {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 40px;
+  }
+
+  /* --- Blok brand (logo, nama, deskripsi, social icon) --------------------- */
+  .footer-isi {
+    width: 100%;
     max-width: 100%;
   }
 
-  .footer-links {
-    width: 100%;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 30px;
-  }
-
   .footer-logo {
-    font-size: 24px;
+    max-width: 70px;
   }
 
-  .footer-description {
-    font-size: 14px;
+  .footer-title {
+    font-size: 1.75rem;
   }
 
-  .footer-menu h3 {
-    font-size: 17px;
+  .footer-subtitle {
+    font-size: 1.35rem;
   }
 
-  .footer-menu a {
-    font-size: 14px;
+  .footer-deskripsi {
+    font-size: 0.85rem;
+    margin-bottom: 20px;
   }
 
-  .footer-bottom {
-    margin-top: 40px;
-
-    font-size: 13px;
+  /* Jaga-jaga kalau ikon social banyak, biar tidak overflow ke samping */
+  .footer-isi a {
+    margin-bottom: 10px;
   }
+
+  /* --- Kolom-kolom fitur (Quick Link, Kontak, dll): row -> column --------- */
+  .fitur-footer {
+    flex-direction: column;
+    width: 100%;
+    gap: 32px;
+  }
+
+  .footer-fitur-title {
+    font-size: 0.95rem;
+    margin-bottom: 18px;
+  }
+
+  .footer-fitur-box li a {
+    font-size: 0.85rem;
+  }
+
+  .footer-fitur-subtitle,
+  .footer-fitur-teks {
+    font-size: 0.85rem;
+  }
+
+  .contact-item span {
+    font-size: 0.85rem;
+  }
+
+  /* --- Copyright bawah ------------------------------------------------------ */
+  .footer > div:last-child p {
+    font-size: 0.65rem;
+    letter-spacing: 0.4px;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE ADD-ON — HP KECIL (max-width: 512px)
+   Tempel blok ini di BAWAH file CSS kamu (setelah blok tablet & mobile
+   yang sudah ada). Tidak ada kode desktop yang diubah/ditulis ulang.
+   Mewakili device seperti iPhone SE (375px), Android kecil (~360px),
+   sampai batas bawah umum (~320px).
+   ========================================================================== */
+/* ==========================================================================
+   RESPONSIVE ADD-ON — HP KECIL (max-width: 512px)
+   ========================================================================== */
+@media (max-width: 512px) {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+  /* ... header & navbar tetap sama ... */
+  header {
+    padding: 12px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+  }
+  .logo-nama {
+    gap: 10px;
+  }
+  .logo {
+    max-width: 55px;
+  }
+  .nama {
+    font-size: 1.3rem;
+  }
+  .subnama {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+  .navbar {
+    padding: 24px 5%;
+    gap: 18px;
+  }
+  .navbar a {
+    font-size: 1rem;
+  }
+
+  /* ========================================================================
+     2. HOME / HERO - PERBAIKAN UTAMA DI SINI
+     ======================================================================== */
+  .home {
+    /* Padding atas 130px supaya konten turun dari navbar, 
+       padding bawah 40px supaya tombol lokasi ga mepet layar */
+    padding: 80px 5% 40px;
+
+    /* Tinggi full layar iPhone SE */
+    min-height: 100dvh;
+
+    display: flex;
+    flex-direction: column;
+
+    /* Flex-start + padding besar = posisi visual tengah yang pas */
+    justify-content: flex-start;
+  }
+
+  .home-subteks {
+    font-size: 2rem; /* Sekitar 32px, pas buat judul HP */
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+
+  .home-teks {
+    font-size: 0.95rem; /* Sekitar 15px */
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+
+  .Menu-lokasi {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .menu-btn a.home-menu {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .lokasi-btn {
+    width: 100%;
+    padding: 14px 20px;
+    justify-content: center;
+  }
+
+  .lokasi-btn a.home-lokasi {
+    font-size: 1rem;
+  }
+
+  .lokasi-btn i.bi-geo-alt {
+    font-size: 0.9rem;
+  }
+
+  .about-fitur {
+    flex-direction: column;
+    gap: 26px;
+  }
+
+  /* ... sisa kode about, menu, galeri, dll tetap sama ... */
 }
