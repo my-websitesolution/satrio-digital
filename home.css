@@ -4,24 +4,30 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 93px;
 }
 
 body {
   margin: 0;
   background-color: aliceblue;
-  font-family: "Poppins", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .hamburger {
-  font-size: 25px;
+  font-size: 30px;
   display: none;
   cursor: pointer;
 }
 
+header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
 .navbar {
-  position: relative;
   width: 100%;
-  z-index: 1000;
+
   background: white;
   display: flex;
   align-items: center;
@@ -72,33 +78,44 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
-  max-width: 1600px;
-  padding: 40px 70px;
-  gap: 30px;
-  overflow: hidden;
+  max-width: 1800px;
+  padding: 40px;
+  padding-top: 9px;
+  gap: 25px;
+
   min-height: 87vh;
 }
 
 .hero-text {
-  padding: 60px 40px;
+  padding: 40px;
   justify-content: flex-start;
   width: 50%;
-  max-width: 500px;
+  max-width: 600px;
+}
+
+.subjudul {
+  padding: 10px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  display: inline-block;
+  background-color: #1e90ff20;
+  color: rgb(0, 128, 255);
+  font-size: 15px;
+  font-weight: 550px;
 }
 
 .JUDUL {
-  font-size: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 55px;
   font-weight: 600;
   white-space: nowrap;
 }
 
-.kata {
-  font-weight: 300;
-}
-
-.subjudul {
-  color: dodgerblue;
+.deskripsi {
+  margin-top: 25px;
+  font-size: 18px;
+  margin-bottom: 35px;
 }
 
 .getour {
@@ -108,10 +125,10 @@ body {
 
 .get {
   background-color: #1d4ed8;
-  padding: 12px;
+  padding: 17px;
   color: white;
   border: none;
-  border-radius: 15px;
+  border-radius: 12px;
   font-size: 20px;
   text-decoration: none;
   display: inline-block;
@@ -128,9 +145,9 @@ body {
   border-style: solid;
   border-width: 2px;
   border-color: #1d4ed8;
-  padding: 12px;
+  padding: 17px;
   color: #1d4ed8;
-  border-radius: 15px;
+  border-radius: 12px;
   font-size: 20px;
   text-decoration: none;
   display: inline-block;
@@ -144,11 +161,11 @@ body {
 }
 
 .isi {
-  padding-top: 70px;
+  display: flex;
+  align-items: center;
   width: 50%;
-  max-width: 750px;
-  height: auto;
-  flex-shrink: 0;
+  max-width: 600px;
+
   margin-right: 0;
 }
 
@@ -243,6 +260,68 @@ body {
   line-height: 1.5;
 }
 
+#Portofolio {
+  padding-top: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 60px;
+
+  box-sizing: border-box;
+}
+
+.title-portofolio {
+  font-size: 16px;
+  color: #1d4ed8;
+}
+
+.portofolio-fitur {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.portofolio-fitur-box {
+  background-color: aliceblue;
+  padding: 40px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.portofolio-gambar {
+  width: 100%;
+  max-width: 490px;
+  border-radius: 8px;
+}
+
+.portofolio-fitur-title {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.btn-portofolio {
+  display: inline-flex;
+  align-items: center;
+
+  background-color: blue;
+  padding: 15px;
+  margin-right: 80px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+
+  transition: 0.2s;
+}
+
+.btn-portofolio:hover {
+  transform: translateY(-5px);
+}
+
 .contact {
   background-color: #f5f7fb;
   padding: 100px 60px;
@@ -323,8 +402,7 @@ body {
   color: #22c55e;
 }
 
-
-  .footer {
+.footer {
   background: #0f172a;
 
   color: white;
@@ -407,6 +485,10 @@ body {
 }
 
 @media (max-width: 1024px) {
+  html {
+    scroll-padding-top: 93px;
+  }
+
   .kiri {
     padding: 0 30px;
   }
@@ -485,6 +567,64 @@ body {
   .fitur-text-services {
     max-width: 100%;
   }
+  #Portofolio {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 80px 60px; /* atas-bawah 80px, kiri-kanan 60px */
+    box-sizing: border-box;
+  }
+
+  .title-portofolio {
+    font-size: 16px;
+    color: #1d4ed8;
+  }
+
+  .portofolio-fitur {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+  }
+
+  .portofolio-fitur-box {
+    background-color: aliceblue;
+    padding: 40px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+
+  .portofolio-gambar {
+    width: 100%;
+    max-width: 490px;
+    border-radius: 8px;
+  }
+
+  .portofolio-fitur-title {
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  .btn-portofolio {
+    display: inline-flex;
+    align-items: center;
+
+    background-color: blue;
+    padding: 15px;
+    margin-right: 80px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+
+    transition: 0.2s;
+  }
+
+  .btn-portofolio:hover {
+    transform: translateY(-5px);
+  }
 
   .contact {
     padding: 60px 40px;
@@ -534,10 +674,364 @@ body {
   .footer-description {
     font-size: 14px;
   }
-  
 }
 
 @media (max-width: 768px) {
+  html {
+    scroll-padding-top: 86px;
+  }
+  .hamburger {
+    display: block;
+  }
+
+  .nama {
+    font-size: 25px;
+  }
+
+  .logo {
+    width: 55px;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    padding: 0;
+  }
+
+  .menu li a {
+    font-size: 20px;
+    text-align: start;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .menu.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .menu li a:hover {
+    transition: 0.2s;
+  }
+
+  .navbar {
+    padding: 10px 25px;
+    align-items: stretch;
+    flex-direction: column;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .kiri {
+    padding: 0;
+    gap: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .home {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 90px 0px;
+    min-height: 87vh;
+  }
+
+  .hero-text {
+    width: 100%;
+    max-width: 600px;
+    padding: 0;
+  }
+
+  .subjudul {
+    font-size: 16px;
+  }
+
+  .JUDUL {
+    font-size: 40px;
+    white-space: normal;
+    line-height: 1.1;
+  }
+
+  .kata {
+    font-size: 25x;
+  }
+
+  .deskripsi {
+    font-size: 20px;
+    line-height: 1.1;
+    width: 100%;
+  }
+
+  .getour {
+    justify-content: start;
+  }
+
+  .get,
+  .our {
+    font-size: 20px;
+  }
+
+  .isi {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+  }
+
+  #About {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 100%;
+    padding: 40px;
+    padding-top: 80px;
+  }
+
+  .hero-text-about {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .judul-about {
+    font-size: 30px;
+    line-height: 1.1;
+  }
+
+  .deskripsi-about {
+    font-size: 22px;
+    line-height: 1.4;
+    max-width: 100%;
+  }
+
+  .about-fitur {
+    display: flex;
+    gap: 80px;
+  }
+
+  .fitur-title {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .fitur-box {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .fitur-text {
+    font-size: 18px;
+  }
+
+  .about-image {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .services {
+    background-color: #f5f7fb;
+    padding: 70px 30px;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .services-subtitle {
+    color: #2563eb;
+    font-size: 18px;
+  }
+
+  .services-title {
+    font-size: 40px;
+  }
+
+  .text-services {
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+  }
+
+  .services-fitur {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .fitur-box-services {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  .icon-services {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #eef2ff;
+    color: #2563eb;
+    font-size: 25px;
+  }
+
+  .fitur-title-services {
+    text-align: start;
+    font-size: 20px;
+  }
+
+  .line-services {
+    width: 17px;
+    height: 2px;
+    background: #2563eb;
+    border-radius: 10px;
+    margin: 15px 0 15px;
+  }
+
+  .fitur-text-services {
+    text-align: start;
+    line-height: 1.5;
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  #Portofolio {
+    padding-top: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 50px;
+    min-height: 87vh;
+    box-sizing: border-box;
+  }
+
+  .title-portofolio {
+    font-size: 18px;
+    color: #1d4ed8;
+  }
+
+  .subtitle-portofolio {
+    font-size: 40px;
+  }
+
+  .portofolio-fitur {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .portofolio-fitur-box {
+    background-color: aliceblue;
+    padding: 40px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+
+  .portofolio-gambar {
+    width: 100%;
+    max-width: 490px;
+    border-radius: 8px;
+  }
+
+  .portofolio-fitur-title {
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  .btn-portofolio {
+    display: inline-flex;
+    align-items: center;
+
+    background-color: blue;
+    padding: 15px;
+    margin-right: 80px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+
+    transition: 0.2s;
+  }
+
+  .btn-portofolio:hover {
+    transform: translateY(-5px);
+  }
+
+  .contact {
+    padding: 60px 20px;
+  }
+
+  .box-contact {
+    display: flex;
+    align-items: center;
+    padding: 45px 40px;
+    gap: 30px;
+    border-radius: 25px;
+  }
+
+  .text-contact {
+    max-width: 100%;
+  }
+
+  .subtitle-contact {
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+
+  .contact-titlee,
+  .contact-title {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+
+  .fitur-text-contact {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .wa-button {
+    width: 100%;
+    justify-content: center;
+    margin-right: 0;
+    padding: 15px 21px;
+    font-size: 16px;
+    border-radius: 18px;
+  }
+
+  .wa-button i {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  html {
+    scroll-padding-top: 65px;
+  }
   .hamburger {
     display: block;
   }
@@ -616,10 +1110,11 @@ body {
   }
 
   .subjudul {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .JUDUL {
+    margin-top: 12px;
     font-size: 28px;
     white-space: normal;
     line-height: 1.1;
@@ -630,11 +1125,14 @@ body {
   }
 
   .deskripsi {
-    font-size: 13px;
+    margin-top: 10px;
+    font-size: 14px;
     width: 100%;
+    margin-bottom: 18px;
   }
 
   .getour {
+    margin-top: 10px;
     justify-content: start;
     flex-wrap: wrap;
   }
@@ -642,7 +1140,7 @@ body {
   .get,
   .our {
     font-size: 16px;
-    padding: 7px 13px;
+    padding: 12px 13px;
   }
 
   .isi {
@@ -765,6 +1263,73 @@ body {
     max-width: 100%;
   }
 
+  #Portofolio {
+    padding-top: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 30px;
+    min-height: 87vh;
+    box-sizing: border-box;
+  }
+
+  .title-portofolio {
+    font-size: 18px;
+    color: #1d4ed8;
+  }
+
+  .subtitle-portofolio {
+    font-size: 30px;
+  }
+
+  .portofolio-fitur {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .portofolio-fitur-box {
+    background-color: aliceblue;
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+
+  .portofolio-gambar {
+    width: 100%;
+    max-width: 490px;
+    border-radius: 8px;
+  }
+
+  .portofolio-fitur-title {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .btn-portofolio {
+    display: inline-flex;
+    align-items: center;
+
+    background-color: blue;
+    padding: 15px;
+    margin-right: 80px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+
+    transition: 0.2s;
+  }
+
+  .btn-portofolio:hover {
+    transform: translateY(-5px);
+  }
+
   .contact {
     padding: 60px 20px;
   }
@@ -810,9 +1375,6 @@ body {
   .wa-button i {
     font-size: 30px;
   }
-}
-
-@media (max-width: 576px) {
   .services-fitur {
     grid-template-columns: 1fr;
   }
